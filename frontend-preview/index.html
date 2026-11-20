@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Dashboard</title>
+    <link rel="stylesheet"
+          href="../src/main/webapp/assets/css/style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+
+        <aside class="sidebar" id="sidebar">
+            <h2>SPD Portal</h2>
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Students</a>
+                <a href="#">Teachers</a>
+                <a href="#">Timetable</a>
+                <a href="#">Reports</a>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="topbar">
+                <button class="menu-toggle"
+                        id="menuToggle"
+                        aria-expanded="false">
+                    ☰
+                </button>
+
+                <h2>Admin Dashboard</h2>
+
+                <button id="themeToggle"
+                        type="button">
+                    Toggle Theme
+                </button>
+            </header>
+
+            <main class="content">
+                <h1>Welcome, Administrator</h1>
+                <p>Student Performance Overview</p>
+
+                <section class="cards">
+                    <div class="card">
+                        <h3>Total Students</h3>
+                        <p>250</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Teachers</h3>
+                        <p>18</p>
+                    </div>
+                    <div class="card">
+                        <h3>Attendance</h3>
+                        <p>87%</p>
+                    </div>
+                    <div class="card">
+                        <h3>Reports</h3>
+                        <p>12</p>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                Student Performance Dashboard © 2026
+            </footer>
+        </div>
+    </div>
+
+    <script src="../src/main/webapp/assets/js/navigation.js"></script>
+</body>
+</html>
