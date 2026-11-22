@@ -80,7 +80,7 @@ body {
 }
 
 .card {
-    background: white;
+    background: var(--white);
     padding: 25px;
     border-radius: 12px;
     border: 1px solid var(--border);
@@ -226,4 +226,166 @@ body.dark-mode .topbar {
 
 .footer {
     border-top: 1px solid var(--border);
+}
+
+
+/* ========================================
+   PHASE B - PROFESSIONAL DASHBOARD UI
+   ======================================== */
+
+/* Dashboard welcome section */
+.dashboard-welcome {
+    margin-bottom: 28px;
+}
+
+.dashboard-welcome h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.dashboard-welcome p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Dashboard statistics cards */
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.stat-card-header h3 {
+    margin-bottom: 0;
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    overflow-wrap: anywhere;
+}
+
+.stat-description {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* Dashboard section layout */
+.dashboard-section {
+    margin-top: 30px;
+}
+
+.section-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.dashboard-panels {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.dashboard-panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    min-width: 0;
+}
+
+.dashboard-panel h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.dashboard-panel p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Placeholder for future backend data */
+.empty-state {
+    padding: 30px 16px;
+    text-align: center;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.empty-state p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Responsive dashboard */
+@media (max-width: 768px) {
+    .dashboard-welcome h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-panels {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-panel {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stat-card {
+        transition: none;
+    }
+
+    .stat-card:hover {
+        transform: none;
+    }
 }

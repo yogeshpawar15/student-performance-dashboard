@@ -27,31 +27,111 @@
 
     <main class="content">
 
-        <h1>Welcome to Admin Dashboard</h1>
-        <p>Student Performance Dashboard Overview</p>
+        <!-- Welcome Section -->
+        <section class="dashboard-welcome">
+            <h1>Welcome, Administrator</h1>
+            <p>
+                Monitor student performance, attendance
+                and academic activities from one place.
+            </p>
+        </section>
 
-        <section class="cards" aria-label="Dashboard overview">
+        <!-- Statistics Section -->
+        <section aria-label="Dashboard statistics">
 
-            <div class="card">
-                <h3>Total Students</h3>
-                <p>Demo — Not Available</p>
+            <h2 class="section-heading">
+                Dashboard Overview
+            </h2>
+
+            <div class="cards">
+
+                <article class="card stat-card">
+                    <div class="stat-card-header">
+                        <h3>Total Students</h3>
+                        <span class="stat-icon" aria-hidden="true">🎓</span>
+                    </div>
+                    <p class="stat-value">Not Available</p>
+                    <div class="stat-description">
+                        Awaiting student data integration
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="stat-card-header">
+                        <h3>Total Teachers</h3>
+                        <span class="stat-icon" aria-hidden="true">👨‍🏫</span>
+                    </div>
+                    <p class="stat-value">Not Available</p>
+                    <div class="stat-description">
+                        Awaiting teacher data integration
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="stat-card-header">
+                        <h3>Attendance</h3>
+                        <span class="stat-icon" aria-hidden="true">📅</span>
+                    </div>
+                    <p class="stat-value">Not Available</p>
+                    <div class="stat-description">
+                        Attendance overview pending
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="stat-card-header">
+                        <h3>Reports</h3>
+                        <span class="stat-icon" aria-hidden="true">📊</span>
+                    </div>
+                    <p class="stat-value">Not Available</p>
+                    <div class="stat-description">
+                        Report data integration pending
+                    </div>
+                </article>
+
             </div>
+        </section>
 
-            <div class="card">
-                <h3>Total Teachers</h3>
-                <p>Demo — Not Available</p>
+        <!-- Dashboard Panels -->
+        <section class="dashboard-section"
+                 aria-label="Academic overview">
+
+            <h2 class="section-heading">
+                Academic Overview
+            </h2>
+
+            <div class="dashboard-panels">
+
+                <article class="dashboard-panel">
+                    <h3>Attendance Overview</h3>
+                    <p>
+                        Track attendance trends and
+                        student participation.
+                    </p>
+
+                    <div class="empty-state">
+                        <p>
+                            Attendance data will appear
+                            after backend integration.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="dashboard-panel">
+                    <h3>Recent Activities</h3>
+                    <p>
+                        View recent academic and
+                        administrative activities.
+                    </p>
+
+                    <div class="empty-state">
+                        <p>
+                            No activity data connected yet.
+                        </p>
+                    </div>
+                </article>
+
             </div>
-
-            <div class="card">
-                <h3>Attendance</h3>
-                <p>Demo — Not Available</p>
-            </div>
-
-            <div class="card">
-                <h3>Reports</h3>
-                <p>Demo — Not Available</p>
-            </div>
-
         </section>
 
 <%@ include file="../common/footer.jsp" %>
