@@ -94,10 +94,12 @@ body {
 }
 
 .card p {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
     color: var(--primary);
+    overflow-wrap: anywhere;
 }
+
 
 .footer {
     text-align: center;
@@ -117,16 +119,24 @@ body {
 
 @media (max-width: 768px) {
     .sidebar {
-        display: none;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 250px;
+        max-width: 85vw;
+        z-index: 1000;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 0.25s ease,
+                    visibility 0.25s ease;
     }
 
     .sidebar.open {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        z-index: 10;
+        transform: translateX(0);
+        visibility: visible;
     }
 
     .menu-toggle {
@@ -169,4 +179,51 @@ body.dark-mode .topbar {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+/* Sidebar branding */
+.sidebar-brand {
+    margin-bottom: 30px;
+}
+
+.sidebar-brand h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.sidebar-brand p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* Sidebar navigation items */
+.sidebar-section {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+    margin: 15px 12px;
+}
+
+.nav-item {
+    display: block;
+    padding: 13px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    color: #cbd5e1;
+    cursor: default;
+}
+
+.nav-item.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Better responsive spacing */
+.sidebar {
+    transition: transform 0.25s ease;
+}
+
+.footer {
+    border-top: 1px solid var(--border);
 }

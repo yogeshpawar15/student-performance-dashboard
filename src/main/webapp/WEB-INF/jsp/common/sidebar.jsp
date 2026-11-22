@@ -1,12 +1,23 @@
 
-<aside class="sidebar" id="sidebar">
-    <h2>Student Dashboard</h2>
+<aside class="sidebar" id="sidebar"
+       aria-label="Sidebar">
 
-    <nav aria-label="Dashboard navigation">
-        <a href="#" class="active">Dashboard</a>
-        <a href="#">Students</a>
-        <a href="#">Teachers</a>
-        <a href="#">Timetable</a>
-        <a href="#">Reports</a>
+    <div class="sidebar-brand">
+        <h2>SPD Portal</h2>
+        <p>Student Performance Dashboard</p>
+    </div>
+
+    <nav aria-label="Main navigation">
+        <span class="sidebar-section">NAVIGATION</span>
+
+        <!-- Backend URLs pending approval -->
+        <span class="nav-item active">
+            Dashboard
+        </span>
+
+        <span class="nav-item">Students</span>
+        <span class="nav-item">Teachers</span>
+        <span class="nav-item">Timetable</span>
+        <span class="nav-item">Reports</span>
     </nav>
 </aside>
