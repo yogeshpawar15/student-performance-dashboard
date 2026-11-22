@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Correction Requests | SPD Portal</title>
+
+    <link rel="stylesheet"
+          href="../src/main/webapp/assets/css/style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar"
+           aria-label="Sidebar">
+
+        <div class="sidebar-brand">
+            <h2>SPD Portal</h2>
+            <p>Student Performance Dashboard</p>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <span class="sidebar-section">NAVIGATION</span>
+
+            <!-- Backend navigation routes pending -->
+            <span class="nav-item">Dashboard</span>
+            <span class="nav-item">Students</span>
+            <span class="nav-item">Teachers</span>
+            <span class="nav-item">Timetable</span>
+            <span class="nav-item">Reports</span>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Toggle sidebar"
+                aria-controls="sidebar"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <h2>Correction Requests</h2>
+
+            <button id="themeToggle" type="button">
+                Toggle Theme
+            </button>
+        </header>
+
+        <main class="content">
+
+            <!-- Welcome -->
+            <section class="dashboard-welcome">
+                <h1>My Correction Requests</h1>
+                <p>
+                    Report errors in attendance or marks
+                    and track your correction requests.
+                </p>
+            </section>
+
+            <!-- New Correction Request -->
+            <section class="dashboard-section"
+                     aria-labelledby="newRequestHeading">
+
+                <h2 class="section-heading"
+                    id="newRequestHeading">
+                    New Correction Request
+                </h2>
+
+                <div class="dashboard-panel">
+
+                    <form id="correctionRequestForm"
+                          class="correction-form">
+
+                        <div class="form-group">
+                            <label for="correctionType">
+                                Correction Type
+                            </label>
+
+                            <select id="correctionType"
+                                    name="correctionType"
+                                    required>
+                                <option value="">
+                                    Select correction type
+                                </option>
+                                <option value="attendance">
+                                    Attendance
+                                </option>
+                                <option value="marks">
+                                    Marks
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subjectName">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subjectName"
+                                name="subjectName"
+                                placeholder="Enter subject name"
+                                maxlength="100"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="requestDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="requestDescription"
+                                name="requestDescription"
+                                rows="5"
+                                minlength="10"
+                                maxlength="1000"
+                                placeholder="Explain the correction needed"
+                                required></textarea>
+                        </div>
+
+                        <p class="form-note">
+                            Please provide accurate details.
+                            Your request cannot be submitted
+                            until backend integration is complete.
+                        </p>
+
+                        <button type="submit"
+                                class="form-submit-btn">
+                            Submit Request
+                        </button>
+
+                        <p id="correctionFormMessage"
+                           class="form-message"
+                           role="status"
+                           aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+            </section>
+
+            <!-- Request History -->
+            <section class="dashboard-section"
+                     aria-labelledby="requestHistoryHeading">
+
+                <h2 class="section-heading"
+                    id="requestHistoryHeading">
+                    Request History
+                </h2>
+
+                <div class="dashboard-panel">
+                    <div class="empty-state">
+                        <p>
+                            No correction request history
+                            is available yet.
+                        </p>
+                        <p>
+                            Request history and approval status
+                            will appear after backend integration.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>Student Performance Dashboard © 2026</p>
+        </footer>
+
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="../src/main/webapp/assets/js/navigation.js"></script>
+<script src="../src/main/webapp/assets/js/correction-requests.js"></script>
+
+</body>
+</html>
