@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | SPD Portal</title>
+    <link rel="stylesheet"
+          href="../src/main/webapp/assets/css/style.css">
+</head>
+<body>
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar"
+           aria-label="Sidebar">
+        <div class="sidebar-brand">
+            <h2>SPD Portal</h2>
+            <p>Student Performance Dashboard</p>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <span class="sidebar-section">NAVIGATION</span>
+            <!-- Backend URLs pending approval -->
+            <span class="nav-item active">Dashboard</span>
+            <span class="nav-item">Students</span>
+            <span class="nav-item">Teachers</span>
+            <span class="nav-item">Timetable</span>
+            <span class="nav-item">Reports</span>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Toggle sidebar"
+                    aria-controls="sidebar"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <h2>Admin Dashboard</h2>
+
+            <button id="themeToggle" type="button">
+                Toggle Theme
+            </button>
+        </header>
+
+        <main class="content">
+
+            <!-- Welcome -->
+            <section class="dashboard-welcome">
+                <h1>Welcome, Administrator</h1>
+                <p>
+                    Monitor student performance, attendance
+                    and academic activities from one place.
+                </p>
+            </section>
+
+            <!-- Statistics -->
+            <section aria-label="Dashboard statistics">
+                <h2 class="section-heading">
+                    Dashboard Overview
+                </h2>
+
+                <div class="cards">
+
+                    <article class="card stat-card">
+                        <div class="stat-card-header">
+                            <h3>Total Students</h3>
+                            <span class="stat-icon" aria-hidden="true">🎓</span>
+                        </div>
+                        <p class="stat-value">Not Available</p>
+                        <div class="stat-description">
+                            Awaiting student data integration
+                        </div>
+                    </article>
+
+                    <article class="card stat-card">
+                        <div class="stat-card-header">
+                            <h3>Total Teachers</h3>
+                            <span class="stat-icon" aria-hidden="true">👨‍🏫</span>
+                        </div>
+                        <p class="stat-value">Not Available</p>
+                        <div class="stat-description">
+                            Awaiting teacher data integration
+                        </div>
+                    </article>
+
+                    <article class="card stat-card">
+                        <div class="stat-card-header">
+                            <h3>Attendance</h3>
+                            <span class="stat-icon" aria-hidden="true">📅</span>
+                        </div>
+                        <p class="stat-value">Not Available</p>
+                        <div class="stat-description">
+                            Attendance overview pending
+                        </div>
+                    </article>
+
+                    <article class="card stat-card">
+                        <div class="stat-card-header">
+                            <h3>Reports</h3>
+                            <span class="stat-icon" aria-hidden="true">📊</span>
+                        </div>
+                        <p class="stat-value">Not Available</p>
+                        <div class="stat-description">
+                            Report data integration pending
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Academic Overview -->
+            <section class="dashboard-section"
+                     aria-label="Academic overview">
+
+                <h2 class="section-heading">
+                    Academic Overview
+                </h2>
+                <div class="dashboard-panels">
+
+                    <!-- Today's Timetable -->
+                    <article class="dashboard-panel">
+                        <h3>Today's Timetable</h3>
+                        <p>
+                            View your scheduled classes
+                            and teaching sessions.
+                        </p>
+
+                        <div class="empty-state">
+                            <p>
+                                Timetable data will appear
+                                after backend integration.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Student Performance -->
+                    <article class="dashboard-panel">
+                        <h3>Student Performance</h3>
+                        <p>
+                            Review student assessment results
+                            and academic progress.
+                        </p>
+
+                        <div class="empty-state">
+                            <p>
+                                Performance data is not
+                                connected yet.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Attendance Management -->
+                    <article class="dashboard-panel">
+                        <h3>Attendance Management</h3>
+                        <p>
+                            Monitor attendance records
+                            for your assigned classes.
+                        </p>
+
+                        <div class="empty-state">
+                            <p>
+                                Attendance management
+                                integration pending.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Recent Activities -->
+                    <article class="dashboard-panel">
+                        <h3>Recent Activities</h3>
+                        <p>
+                            View recent teaching and
+                            academic activities.
+                        </p>
+
+                        <div class="empty-state">
+                            <p>
+                                No activity data connected yet.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>Student Performance Dashboard © 2026</p>
+        </footer>
+    </div>
+</div>
+
+<script src="../src/main/webapp/assets/js/navigation.js"></script>
+</body>
+</html>
